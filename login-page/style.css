@@ -33,7 +33,7 @@ h2 {
 
 .input-box input {
   width: 100%;
-  padding: 18px 15px 12px; /* more top padding to make room for the label when floated */
+  padding: 18px 15px 12px; 
   background: none;
   border: none;
   color: whitesmoke;
@@ -58,7 +58,7 @@ h2 {
   transform: translateY(-50%);
 }
 
-/* Float the label up when the input is focused or has a value */
+
 .input-box input:focus + span,
 .input-box input:not(:placeholder-shown) + span {
   top: -8px;
@@ -67,7 +67,7 @@ h2 {
   color: purple;
 }
 
-/* Optional: make placeholder color slightly dimmer so it doesn't compete with the label */
+
 .input-box input::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
