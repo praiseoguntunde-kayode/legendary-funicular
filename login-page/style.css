@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0, 1);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px fuchsia;
+  width: 320px;
+}
+
+h2 {
+  color: whitesmoke;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 18px 15px 12px; /* more top padding to make room for the label when floated */
+  background: none;
+  border: none;
+  color: whitesmoke;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  transition: 0.2s;
+}
+
+.input-box input:focus {
+  border-color: pink;
+  box-shadow: 0 5px 15px purple;
+}
+
+.input-box span {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.2s;
+  transform: translateY(-50%);
+}
+
+/* Float the label up when the input is focused or has a value */
+.input-box input:focus + span,
+.input-box input:not(:placeholder-shown) + span {
+  top: -8px;
+  transform: translateY(0);
+  font-size: 13px;
+  color: purple;
+}
+
+/* Optional: make placeholder color slightly dimmer so it doesn't compete with the label */
+.input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
